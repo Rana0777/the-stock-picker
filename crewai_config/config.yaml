@@ -1,0 +1,31 @@
+agents:
+  trader_agent:
+    class: TraderAgent
+    methods:
+      - initialize
+      - execute_trade
+      - evaluate_performance
+
+strategies:
+  momentum_strategy:
+    class: MomentumStrategy
+    methods:
+      - calculate_signals
+      - generate_trade_decision
+
+data:
+  data_loader:
+    class: DataLoader
+    methods:
+      - load_data
+      - preprocess_data
+
+settings:
+  logging:
+    level: INFO
+  trading:
+    initial_capital: 100000
+    commission: 0.001
+  data:
+    source: "market_data.csv"
+    frequency: "daily"
